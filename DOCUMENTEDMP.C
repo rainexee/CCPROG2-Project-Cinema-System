@@ -4,7 +4,7 @@ concepts learned. I have constructed the functions and their respective algorith
 myself. The program was run, tested, and debugged by my own efforts. I further certify that I have not copied
 in part or whole or otherwise plagiarized the work of other students and/or persons.
 <Juan Antonio Menchaca>, DLSU ID# <12110612>
-<Elijah Murcia>, DLSU ID# <>
+<Elijah Raphael Murcia>, DLSU ID# <11901543>
 *********************************************************************************************************/
 #include <stdio.h>
 #include <stdlib.h>
@@ -540,8 +540,9 @@ void initCustomerCart(CustomerCart *myCart) {
 /*vSeat - Check if seat is Valid
 @param r = Row of seat
 @param n = Column of seat
-@returns void
-Pre-condition:N/A.
+@returns 1 if seat is confirmed valid, else returns 0
+
+Pre-condition: user must have input a char and an int in seatSelect func
 */
 int vSeat(char r,
           int n) { /// CHECKS SEAT VALIDITY FOR THE 'SelectCinemaSeat' FUNCTION
@@ -555,7 +556,7 @@ int vSeat(char r,
   return 0;
 }
 
-/*SelectCinemaSeat - Function where the user can select a cinema seat
+/*SelectCinemaSeat - Function where the user can choose a movie showtime to buy seats for
 @param Movies[] - MovieData is stored here
 @param Showings[][6] - SeatingData for customer 
 @param *Cart - Customers chosen movies and seats are sent here to be printed out on a ticket.
@@ -626,7 +627,7 @@ void SelectCinemaSeat(MovieData Movies[], SeatingData Showings[][6],
 @param *c = Seating Data Structure, is required for Customer Cart *t
 @param *t = Customer Cart structure, contains tickets etc.
 @returns void
-Pre-condition:N/A.
+Pre-condition: Customer must have picked a valid movie with a valid showtime in SelectCinemaSeat
 */
 void SeatSelect(SeatingData *c, CustomerCart *t) {
 
@@ -739,7 +740,7 @@ void SeatSelect(SeatingData *c, CustomerCart *t) {
 @param *Cart = Customers inputted choices from seat selection 
 @param s[][6] = SeatingData struct
 @returns void
-Pre-condition:N/A.
+Pre-condition: Ideally customer should have purchased at least 1 ticket, otherwise a blank txt file will be produced
 */
 
 void PrintCart(CustomerCart *Cart, SeatingData s[][6]) {
