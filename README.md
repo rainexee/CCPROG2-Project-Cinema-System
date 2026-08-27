@@ -1,4 +1,4 @@
-# CCPROG2
+# CCPROG2 Final Project
 
-MP, INCASE REPLIT SLOW ASF
+Cinema System with custom movies, seat & ticketing etc.
 
